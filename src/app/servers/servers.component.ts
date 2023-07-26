@@ -21,6 +21,7 @@ export class ServersComponent implements OnInit {
   }
 
   onReload() {
-    this.router.navigate(['servers'], { relativeTo: this.route });
+    // the commented code breaks the app; an example of using relative paths when programatically routing with the Router.navigate() method
+    // this.router.navigate(['servers'], { relativeTo: this.route });
   }
 }
