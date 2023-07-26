@@ -17,7 +17,7 @@ export class UserComponent implements OnInit {
       id: this.route.snapshot.params['id'],
       name: this.route.snapshot.params['name'],
     };
-    /* This way listens to changes to the params and reacts to the change by reassigning the user.id and user.name, triggering a rerender to update the data bound in the template */
+    /* This way uses the params Observable to listen to changes to the params and reacts to the change by reassigning the user.id and user.name, triggering a rerender to update the data bound in the template */
     this.route.params.subscribe((params: Params) => {
       this.user.id = params['id'];
       this.user.name = params['name'];
